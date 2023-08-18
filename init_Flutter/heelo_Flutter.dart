@@ -1,7 +1,14 @@
-import 'dart:ffi';
-
 void main() {
   print("hello ");
+//var, const, final
+  var variavel = "ele pode ser auterada";
+  const int naoPodeSerMudar = 2;
+  final String possoMudarUmaVez;
+  variavel = "mudei";
+// naoPodeSerMudar = 3; erro
+  possoMudarUmaVez = "apos dar valor a ele nao posso ser alterado";
+//possoMudarUmaVez="nao consigo"
+
 //listas dinamicas
   var natan = "natan carrapeiro";
   var idadeNatan = 22;
@@ -24,7 +31,6 @@ void main() {
   print(listaNomes);
   listaNomes.remove("gabriel");
   print(listaNomes);
-
   print("tamanho de itens da lista ${listaNomes.length}");
 
 //strings
