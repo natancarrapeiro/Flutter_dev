@@ -1,5 +1,13 @@
 void main() {
   print("hello ");
+//while
+  int energia = 100;
+  while (energia > 0) {
+    print('voce tem $energia energia ainda');
+    energia -= 25;
+  }
+  ;
+
 //for
   int indentificador = 0;
   for (var i = indentificador; i <= 10; i++) {
@@ -11,7 +19,7 @@ void main() {
   bool carteiraDeMotorista = true;
   String nomeMotorista = "Natan";
   if (idadeMotorista >= 18 && carteiraDeMotorista) {
-    print("Pode dirigir senho $nomeMotorista \n Boa viagem");
+    print("Pode dirigir senhor $nomeMotorista \n Boa viagem");
   } else {
     print('Não pode seguir a viagem pois nao tem idade'
         ' ou nao tem carteira de motorista');
