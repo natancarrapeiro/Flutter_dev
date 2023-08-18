@@ -7,6 +7,12 @@ void main() {
     energia -= 25;
   }
   ;
+  int energia2 = 100;
+  do {
+    print("mais uma repetição");
+    print('voce tem $energia2 energia ainda');
+    energia2 -= 20;
+  } while (energia2 >= 20);
 
 //for
   int indentificador = 0;
