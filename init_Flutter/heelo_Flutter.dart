@@ -1,5 +1,21 @@
 void main() {
   print("hello ");
+//for
+  int indentificador = 0;
+  for (var i = indentificador; i <= 10; i++) {
+    print(i);
+  }
+
+//if(){}else
+  int idadeMotorista = 22;
+  bool carteiraDeMotorista = true;
+  String nomeMotorista = "Natan";
+  if (idadeMotorista >= 18 && carteiraDeMotorista) {
+    print("Pode dirigir senho $nomeMotorista \n Boa viagem");
+  } else {
+    print('Não pode seguir a viagem pois nao tem idade'
+        ' ou nao tem carteira de motorista');
+  }
 
 //var, const, final
   var variavel = "ele pode ser auterada";
