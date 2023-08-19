@@ -1,5 +1,5 @@
 import 'package:new_projeto/funcEstaMadura.dart';
-import 'package:new_projeto/funcMostraMadura.dart';
+import 'class_Frutas.dart';
 
 void main(List<String> arguments) {
   print("hello");
@@ -10,5 +10,13 @@ void main(List<String> arguments) {
   int diasDeColhetada = 20;
   bool isMadura = funcEstaMadura(diasDeColhetada);
 
-  funcMostraTaMadura(nome, diasDeColhetada, cor: corFruta);
+  Frutas frutaLaranja =
+      Frutas(nome, peso, corFruta, sabor, diasDeColhetada, 15);
+
+  Frutas frutaUva = Frutas("uva", 98.5, "roxa", "doce", 8, 7);
+
+  print(frutaLaranja.nome);
+  print(frutaUva.nome);
+
+  frutaUva.estaMadura(frutaUva.diasParaFicarMaduro);
 }

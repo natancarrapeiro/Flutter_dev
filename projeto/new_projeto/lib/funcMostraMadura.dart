@@ -10,3 +10,18 @@ void funcMostraTaMadura(String nome, int dias, {String? cor}) {
     print(("A $nome é da cor $cor"));
   }
 }
+
+funcDiasPraMadurar(int dias) {
+  int quantosDiasMadura = 15;
+  int tempoQuePodeConsumir = 30;
+  int tempoDeComsumoRestante = tempoQuePodeConsumir - dias;
+  if (dias > quantosDiasMadura) {
+    print(
+        "Esta fruta pode ser consumida por mais $tempoDeComsumoRestante dias");
+    return tempoDeComsumoRestante;
+  } else {
+    int quantosDiasFaltam = dias - quantosDiasMadura;
+    print("Ainda nao está maduro falta $quantosDiasFaltam");
+    return quantosDiasFaltam;
+  }
+}
