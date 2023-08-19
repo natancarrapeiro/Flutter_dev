@@ -12,12 +12,9 @@ class Frutas_Critricas extends Frutas {
     int diasParaFicarMaduro,
     bool? isMadura,
     this.nivelAzedo,
-  ) : super(
-          nome,
-          peso,
-          cor,
-          sabor,
-          diasColetado,
-          diasParaFicarMaduro,
-        );
+  ) : super(nome, peso, cor, sabor, diasColetado, diasParaFicarMaduro);
+
+  void fazerRefrigerante() {
+    print("Com essa fruta $nome você fez um refrigerante");
+  }
 }

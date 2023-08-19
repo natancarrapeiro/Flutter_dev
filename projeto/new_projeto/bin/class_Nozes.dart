@@ -14,4 +14,7 @@ class Nozes extends Frutas {
           diasColetado,
           diasParaFicarMaduro,
         );
+  void extrairOsOlios() {
+    print("Oleos da $nome esta feito");
+  }
 }
