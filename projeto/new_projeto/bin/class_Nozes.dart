@@ -17,4 +17,12 @@ class Nozes extends Frutas {
   void extrairOsOlios() {
     print("Oleos da $nome esta feito");
   }
+
+  @override
+  separarIngredientes() {
+    // nova função somente nas nozes
+    print("Abrir as nozes");
+    //chama o metoro mãe usando o super
+    super.separarIngredientes();
+  }
 }
