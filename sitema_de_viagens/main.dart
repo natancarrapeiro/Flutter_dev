@@ -11,8 +11,19 @@ void main(List<String> args) {
 //e dentro dela chamei a função e a função vai retorna um valor pra ela
 // e assim armazenar em uma lista de dados de destinos
   registroDeViagem = registroDeDestinos("Guapirama", registroDeViagem);
-  registroDeViagem = registroDeDestinos("Curitiba", registroDeViagem);
-  registroDeViagem = registroDeDestinos("Londrina", registroDeViagem);
-  registroDeViagem = registroDeDestinos("Maringa", registroDeViagem);
   print(registroDeViagem);
+//usando MAP
+//chave ,valor
+  Map<String, double> registroPreco = {};
+  registroPreco["Guapirama"] = 150.0;
+  print(registroPreco);
+  registroPreco["Londrina"] = 250.0;
+  print(
+      registroPreco["Londrina"]); //dou uma chave para ele  ele me retona valor
 }
+//iterables tetes doc:https://dart.dev/codelabs/iterables
+// print(registroDeViagem.first); //primeiro
+// print(registroDeViagem.last); //ultimo
+// print(registroDeViagem.length); //quanto tem na lista
+// print(registroDeViagem.isEmpty); //se a lista esta vazia
+// print(registroDeViagem.indexed); //onde esta alocado os items da lista
