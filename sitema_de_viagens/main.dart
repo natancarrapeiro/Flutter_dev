@@ -1,9 +1,6 @@
-import 'meioDeTransporte.dart';
 import 'registroDeDestinos.dart';
 
 void main(List<String> args) {
-  escolhaTransporteEnum(Transporte.skate);
-
 //criei o banco de dado do destinos
   Set<String> registroDeViagem = <String>{};
 
@@ -14,7 +11,7 @@ void main(List<String> args) {
   print(registroDeViagem);
 //usando MAP
 //chave ,valor
-  Map<String, double> registroPreco = {};
+  Map<String, dynamic> registroPreco = {};
   registroPreco["Guapirama"] = 150.0;
   print(registroPreco);
   registroPreco["Londrina"] = 250.0;
