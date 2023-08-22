@@ -1,23 +1,16 @@
-import 'registroDeDestinos.dart';
+import 'classViagem.dart';
+import 'meioDeTransporte.dart';
 
 void main(List<String> args) {
-//criei o banco de dado do destinos
-  Set<String> registroDeViagem = <String>{};
+  Viagem viagemagosto = Viagem(locomocao: Transporte.carro);
+  viagemagosto.visitar();
+  viagemagosto.aventura();
 
-//criei um local onde vou armazenar os dados da função (registroDeViagem)
-//e dentro dela chamei a função e a função vai retorna um valor pra ela
-// e assim armazenar em uma lista de dados de destinos
-  registroDeViagem = registroDeDestinos("Guapirama", registroDeViagem);
-  print(registroDeViagem);
-//usando MAP
-//chave ,valor
-  Map<String, dynamic> registroPreco = {};
-  registroPreco["Guapirama"] = 150.0;
-  print(registroPreco);
-  registroPreco["Londrina"] = 250.0;
-  print(
-      registroPreco["Londrina"]); //dou uma chave para ele  ele me retona valor
+  viagemagosto.alterarViagens = 10;
+
+  viagemagosto.visitar();
 }
+ 
 //iterables tetes doc:https://dart.dev/codelabs/iterables
 // print(registroDeViagem.first); //primeiro
 // print(registroDeViagem.last); //ultimo
