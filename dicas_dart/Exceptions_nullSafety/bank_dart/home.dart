@@ -1,11 +1,14 @@
 import 'controllers/bank_controller.dart';
 import 'exceptions/bank_controller_excepton.dart';
 import 'models/conta.dart';
+import 'testNullSafety.dart';
 
 void main() {
   //assert(2<1);
 //Account accountTest= Account(name: 'natan', balance: -1, isAuthenticated: true);
-  user();
+//   user();
+testNullSafety();
+
 }
 
 void user() {
