@@ -3,6 +3,12 @@ import 'exceptions/bank_controller_excepton.dart';
 import 'models/conta.dart';
 
 void main() {
+  //assert(2<1);
+//Account accountTest= Account(name: 'natan', balance: -1, isAuthenticated: true);
+  user();
+}
+
+void user() {
   // doc catch:https://dart.dev/language/error-handling#catch
 
   // Criando o banco
@@ -25,7 +31,7 @@ void main() {
         idSender: "Kako", idReceiver: "Ricarth", amount: 700);
 
     // Observando resultado
-    if(result){
+    if (result) {
       print("Transação realizada com sucesso!");
     }
   } on SenderIdInvalidException catch (e) {
@@ -42,7 +48,7 @@ void main() {
     print(
         "O usuario de ID '${e.idSender}' tentou enviar o valor  ${e.amount} " +
             "maior do que o saldo disponivel ${e.senderBalance}  ");
-  }on Exception{
+  } on Exception {
     print("Exception  desconhecido não tratado");
   }
 }
