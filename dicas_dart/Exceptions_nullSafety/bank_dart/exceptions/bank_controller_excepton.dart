@@ -1,5 +1,8 @@
 // Exceção de ID do remetente inválida
-class SenderIdInvalidException implements Exception {}
+class SenderIdInvalidException implements Exception {
+  String idSender;
+  SenderIdInvalidException({required this.idSender});
+}
 
 class ReceiverIdIvalidException implements Exception{}
 
