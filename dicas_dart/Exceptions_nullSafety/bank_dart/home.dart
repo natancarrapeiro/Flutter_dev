@@ -12,21 +12,33 @@ void main() {
   bankController.addAccount(
       id: "Ricarth",
       account:
-      Account(name: "Ricarth Lima", balance: 400, isAuthenticated: true));
+          Account(name: "Ricarth Lima", balance: 600, isAuthenticated: true));
 
   bankController.addAccount(
       id: "Kako",
       account:
-      Account(name: "Caio Couto", balance: 600, isAuthenticated: true));
+          Account(name: "Caio Couto", balance: 500, isAuthenticated: true));
 
   try {
     // Fazendo transferência
     bool result = bankController.makeTransfer(
-        idSender: "Kako1", idReceiver: "Ricarth", amount: 700);
+        idSender: "Kako", idReceiver: "Ricarth", amount: 700);
 
     // Observando resultado
-    print(result);
+    if(result){
+      print("Transação realizada com sucesso!");
+    }
   } on SenderIdInvalidException catch (e) {
     print("O id  '${e.idSender}' do remetente não é um ID  válido.");
+  } on ReceiverIdIvalidException catch (e) {
+    print("O id  '${e.idReceiver}' do destinatario não é um ID  válido.");
+  } on SenderNotAuthenticatedException catch (e) {
+    print("O usario remetente de ID '${e.idSender}' não  está autenticado ");
+  } on SenderBalanceLowerThanAmountException catch (e) {
+    print(
+        "O usuario de ID '${e.idSender}' tentou enviar o valor  ${e.amount} " +
+            "maior do que o saldo disponivel ${e.senderBalance}  ");
+  }on Exception{
+    print("Exception  desconhecido não tratado");
   }
 }
