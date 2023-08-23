@@ -1,7 +1,9 @@
 import 'controllers/bank_controller.dart';
-import 'models/account.dart';
+import 'models/conta.dart';
 
 void main() {
+  // doc catch:https://dart.dev/language/error-handling#catch
+
   // Criando o banco
   BankController bankController = BankController();
 
@@ -22,4 +24,5 @@ void main() {
 
   // Observando resultado
   print(result);
+
 }
